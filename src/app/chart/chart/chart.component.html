@@ -1,0 +1,59 @@
+<div>
+  <canvasjs-chart [options]="chartOptions"></canvasjs-chart>
+</div>
+<div class="container">
+  <button (click)="updateData()">Save Current Data</button>
+  <button (click)="showTableDetails()">Get Past Data</button>
+</div>
+
+<table class="styled-table" *ngIf="showTable === true">
+  <thead>
+    <tr>
+      <th>Month</th>
+      <th>Points</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of ChartData" class="active-row">
+      <td>January</td>
+      <td>{{ item.variable1 }}</td>
+    </tr>
+    <tr *ngFor="let item of ChartData" class="active-row">
+      <td>February</td>
+      <td>{{ item.variable2 }}</td>
+    </tr>
+    <tr *ngFor="let item of ChartData" class="active-row">
+      <td>March</td>
+      <td>{{ item.variable3 }}</td>
+    </tr>
+    <tr *ngFor="let item of ChartData" class="active-row">
+      <td>April</td>
+      <td>{{ item.variable4 }}</td>
+    </tr>
+    <tr *ngFor="let item of ChartData" class="active-row">
+      <td>May</td>
+      <td>{{ item.variable5 }}</td>
+    </tr>
+    <tr *ngFor="let item of ChartData" class="active-row">
+      <td>June</td>
+      <td>{{ item.variable6 }}</td>
+    </tr>
+    <tr *ngFor="let item of ChartData" class="active-row">
+      <td>July</td>
+      <td>{{ item.variable7 }}</td>
+    </tr>
+    <tr *ngFor="let item of ChartData" class="active-row">
+      <td>August</td>
+      <td>{{ item.variable8 }}</td>
+    </tr>
+    <tr *ngFor="let item of ChartData" class="active-row">
+      <td>September</td>
+      <td>{{ item.variable9 }}</td>
+    </tr>
+    <tr *ngFor="let item of ChartData" class="active-row">
+      <td>October</td>
+      <td>{{ item.variable10 }}</td>
+    </tr>
+
+  </tbody>
+</table>
